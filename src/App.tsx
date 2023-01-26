@@ -8,11 +8,8 @@ import AddNote from './components/AddNote';
 
 
 const App = () => {
-  // Get Notes from Server
-  const { loading, error, data, refetch } = useQuery(GET_NOTES)
-
-  // Controls for adding notes
   const [showAddNote, setShowAddNote] = useState<boolean>(false)
+  const { loading, error, data, refetch } = useQuery(GET_NOTES)
   
   return (
     <Container>

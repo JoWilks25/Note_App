@@ -6,8 +6,7 @@ import NoteCard from "./NoteCard";
 interface NoteListProps {
   loading: boolean;
   error: ApolloError | undefined;
-  data: any;
-  // { notes: Note[]};
+  data: { notes: Note[] } | undefined;
 }
 
 const NotesList = (props: NoteListProps): React.ReactElement => {

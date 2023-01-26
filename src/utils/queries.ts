@@ -1,11 +1,6 @@
-import { gql, TypedDocumentNode } from '@apollo/client';
-import { Note } from './NoteInterface';
+import { gql } from '@apollo/client';
 
-interface NoteData {
-  noteData: NoteData[];
-}
-
-export const GET_NOTES: TypedDocumentNode<NoteData, Note> = gql`
+export const GET_NOTES = gql`
   query GetNotes {
     notes(
       distinct_on: [id],
@@ -24,7 +19,7 @@ interface AddNote {
   text: string;
 }
 
-export const ADD_NOTE: TypedDocumentNode<NoteData, AddNote> = gql`
+export const ADD_NOTE = gql`
   mutation AddNote (
     $text: String!
   ) {
