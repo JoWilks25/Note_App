@@ -15,10 +15,6 @@ export const GET_NOTES = gql`
   }
 `;
 
-interface AddNote {
-  text: string;
-}
-
 export const ADD_NOTE = gql`
   mutation AddNote (
     $text: String!
