@@ -13,7 +13,8 @@ const AddNote = (props: AddNoteProps): React.ReactElement => {
   const { setShowAddNote, refetch } = props;
   const [text, setText] = useState<string>('')
   const [addNote, {loading, error}] = useMutation(ADD_NOTE);
-  const handleSave = async () => {
+
+  const handleSave: () => Promise<void> = async () => {
     await addNote({
       variables: {
         text

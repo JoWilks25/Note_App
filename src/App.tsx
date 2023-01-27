@@ -5,8 +5,6 @@ import { GET_NOTES } from './utils/queries';
 import NotesList from './components/NotesList';
 import AddNote from './components/AddNote';
 
-
-
 const App = () => {
   const [showAddNote, setShowAddNote] = useState<boolean>(false)
   const { loading, error, data, refetch } = useQuery(GET_NOTES)
